@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using OpenAI.Chat;
+﻿using OpenAI.Chat;
 
 namespace AiNewsFetcher.Infrastructure.AzureOpenAi
 {

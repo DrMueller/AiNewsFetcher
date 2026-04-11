@@ -1,6 +1,7 @@
 using AiNewsFetcher.Infrastructure.AzureOpenAi;
 using AiNewsFetcher.Infrastructure.AzureOpenAi.Implementation;
 using AiNewsFetcher.Infrastructure.AzureOpenAi.Servants;
+using AiNewsFetcher.Infrastructure.AzureOpenAi.Servants.Implementation;
 using AiNewsFetcher.Infrastructure.Emails.Services;
 using AiNewsFetcher.Infrastructure.Emails.Services.Implementation;
 using AiNewsFetcher.Infrastructure.Settings;

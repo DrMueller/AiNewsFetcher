@@ -1,10 +1,6 @@
-﻿using AiNewsFetcher.Infrastructure.Settings;
-using Azure.AI.OpenAI;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Azure.AI.OpenAI;
 
-namespace AiNewsFetcher.Infrastructure.AzureOpenAi.Servants
+namespace AiNewsFetcher.Infrastructure.AzureOpenAi.Servants.Implementation
 {
     public class AiClientProxy : IAiClientProxy
     {

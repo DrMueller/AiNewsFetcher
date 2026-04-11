@@ -1,7 +1,7 @@
 ﻿using System.ClientModel;
 using OpenAI.Chat;
 
-namespace AiNewsFetcher.Infrastructure.AzureOpenAi.Servants;
+namespace AiNewsFetcher.Infrastructure.AzureOpenAi.Servants.Implementation;
 
 public class ChatClientProxy : IChatClientProxy
 {

@@ -1,8 +1,6 @@
 ﻿using System.Text;
 using AiNewsFetcher.Infrastructure.AzureOpenAi.Servants;
 using AiNewsFetcher.Infrastructure.Settings;
-using Azure;
-using Azure.AI.OpenAI;
 using JetBrains.Annotations;
 using Microsoft.Extensions.Options;
 using OpenAI.Chat;

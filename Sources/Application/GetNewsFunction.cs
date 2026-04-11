@@ -1,34 +1,15 @@
 using AiNewsFetcher.Infrastructure.AzureOpenAi;
 using AiNewsFetcher.Infrastructure.Emails.Models;
 using AiNewsFetcher.Infrastructure.Emails.Services;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using OpenAI.Chat;
 
 namespace AiNewsFetcher;
 
-public class GetNewsFunction
+public class GetNewsFunction(ILoggerFactory loggerFactory, IAzureOpenAiClient aiClient, IEmailSender emailSender)
 {
-    private readonly IAzureOpenAiClient _aiClient;
-    private readonly IEmailSender _emailSender;
-    private readonly ILogger _logger;
-
-    public GetNewsFunction(ILoggerFactory loggerFactory, IAzureOpenAiClient aiClient, IEmailSender emailSender)
-    {
-        _aiClient = aiClient;
-        _emailSender = emailSender;
-        _logger = loggerFactory.CreateLogger<GetNewsFunction>();
-    }
-
-    [Function("TestTimer")]
-    public async Task<IActionResult> RunManual(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
-    {
-        await Run(null); // Timer-Methode manuell aufrufen
-        return new OkResult();
-    }
+    private readonly ILogger _logger = loggerFactory.CreateLogger<GetNewsFunction>();
 
     [Function("GetNewsFunction")]
     public async Task Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer)
@@ -39,8 +20,8 @@ public class GetNewsFunction
             ChatMessageContentPart.CreateTextPart(Prompts.SearchPrompt
             ));
 
-        var searchResult = await _aiClient.SendAsync(message);
-        await _emailSender.SendAsync(new Email(
+        var searchResult = await aiClient.SendAsync(message);
+        await emailSender.SendAsync(new Email(
             "Matthias.mueller@noser.com",
             "AI news",
             searchResult));
