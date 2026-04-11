@@ -12,7 +12,7 @@ variable "app_name" {
   type = string
 }
 
-variable "environment_name" {
+variable "environment_prefix" {
   type = string
 }
 

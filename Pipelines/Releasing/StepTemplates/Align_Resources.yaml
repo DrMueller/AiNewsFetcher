@@ -20,5 +20,5 @@ steps:
       workingDirectory: $(System.DefaultWorkingDirectory)/drop/Terraform
       environmentServiceNameAzureRM: TerraformConnection2
     env:
-      TF_VAR_app_name: $(AppName),
-      TF_VAR_environment_name: $(EnvironmentName)
+      TF_VAR_app_name: $(AppName)
+      TF_VAR_environment_prefix: $(EnvironmentPrefix)
