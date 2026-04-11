@@ -2,42 +2,73 @@ name: 1.0$(rev:.r) # build numbering format
 
 trigger: none # will disable CI builds entirely
 
-variables:
-  BuildConfiguration: "Release"
-  FolderToPublish: "Application"
-  PublishPath: "$(Build.ArtifactStagingDirectory)"
-  TerraformPath: "Pipelines/Releasing/Terraform"
-
 resources:
   pipelines:
-    - pipeline: ainewsfetcher-ci-pip # Name of the pipeline resource
-      source: 01-AiNewsFetcher-Continuous-Integration # Name of the pipeline referenced by the pipeline resource
-      trigger:
-        branches:
-          - refs/heads/master
+  - pipeline: ca-pip  # Name of the pipeline resource
+    source: 01-AiNewsFetcher-Continous-Integration # Name of the pipeline referenced by the pipeline resource
+    trigger: true
 
+variables:
+  BuildConfiguration: 'Release'
+  PublishPath: '$(Build.ArtifactStagingDirectory)'
+  TerraformPath: "Pipelines/Releasing/Terraform"
+  SqlOutputFile: '$(Build.ArtifactStagingDirectory)/SQL/Migration.sql'
+  
 jobs:
-  - job: "BuildAndPublishAsArtifact"
-    displayName: "Build and save zipped Artifact"
-    pool:
-      name: Azure Pipelines
-      vmImage: windows-2019
-    steps:
-      - task: DotNetCoreCLI@2
-        displayName: Publish
-        inputs:
-          command: publish
-          publishWebProjects: false
-          projects: "**/Sources/$(FolderToPublish)/*.csproj"
-          arguments: "--configuration $(BuildConfiguration) --output $(PublishPath)/App /p:DeleteExistingFiles=True"
-          zipAfterPublish: true
-          modifyOutputPath: false
-      - task: CopyFiles@2
-        displayName: "Copy Terraform files"
-        inputs:
-          SourceFolder: $(TerraformPath)
-          TargetFolder: $(PublishPath)/Terraform
-      - task: PublishBuildArtifacts@1
-        displayName: "Save Artifacts"
-        inputs:
-          PathtoPublish: "$(PublishPath)"
+- job: 'BuildAndPublishAsArtifact'
+  displayName: 'Build and save zipped Artifact'
+  pool:
+    name: Azure Pipelines
+    vmImage: windows-latest
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore'
+    inputs:
+      command: restore
+      projects: 'Sources/**/*.csproj'
+
+  - task: qetza.replacetokens.replacetokens-task.replacetokens@5
+    displayName: "Replace tokens in appsettings.json"
+    inputs:
+      rootDirectory: "$(Build.Repository.LocalPath)"
+      targetFiles: |
+        **/appsettings.json
+      tokenPattern: rm
+      verbosity: detailed
+      keepToken: true
+
+  - task: DotNetCoreCLI@2
+    displayName: Publish Blazor
+    inputs:
+      command: publish
+
+      publishWebProjects: false
+
+      projects: 'Sources/Application/DrinkBuddy.csproj'
+
+      arguments: '--configuration $(BuildConfiguration) --output $(PublishPath)/App /p:DeleteExistingFiles=True'
+
+      zipAfterPublish: true
+
+      modifyOutputPath: false
+
+  - script: 'dotnet tool install --global dotnet-ef --version 9.0.10'
+    displayName: 'Install EF'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Create ef sql migration script'
+    inputs:
+      command: custom
+      custom: ef
+      arguments: ' migrations script --configuration Release --output $(SqlOutputFile) --idempotent --context AppDbContext'
+      workingDirectory: '$(System.DefaultWorkingDirectory)\Sources\Application'
+
+  - task: CopyFiles@2
+    displayName: "Copy Terraform files"
+    inputs:
+      SourceFolder: $(TerraformPath)
+      TargetFolder: $(PublishPath)/Terraform
+  - task: PublishBuildArtifacts@1
+    displayName: 'Save Artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
