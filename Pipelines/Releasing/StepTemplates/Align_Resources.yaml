@@ -1,10 +1,4 @@
 steps:
-  - task: qetza.replacetokens.replacetokens-task.replacetokens@5
-    displayName: "Replace tokens in *.tf"
-    inputs:
-      rootDirectory: $(System.DefaultWorkingDirectory)/drop/Terraform
-      targetFiles: "*.tf"
-      tokenPattern: azpipelines
 
   - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
     displayName: "Install Terraform dependencies"
@@ -25,3 +19,5 @@ steps:
       command: apply
       workingDirectory: $(System.DefaultWorkingDirectory)/drop/Terraform
       environmentServiceNameAzureRM: TerraformConnection
+    env:
+      TF_VAR_app_name: $(AppName)

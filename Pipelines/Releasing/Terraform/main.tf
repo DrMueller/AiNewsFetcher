@@ -51,5 +51,8 @@ resource "azurerm_function_app" "res" {
   site_config {
     dotnet_framework_version = "v6.0"
   }
+    app_settings = {
+    "AppName"    = var.app_name
+  }
   version = "~4"
 }
