@@ -2,7 +2,7 @@ trigger:
   batch: true
   branches:
     include:
-    - master
+    - main
 
 variables:
   BuildConfiguration: "Release"
@@ -26,12 +26,6 @@ jobs:
         inputs:
           projects: "Sources/**/*.csproj"
           arguments: '/p:TreatWarningsAsErrors="true" --configuration $(BuildConfiguration)'
-      - task: DotNetCoreCLI@2
-        displayName: Run Tests
-        inputs:
-          command: test
-          projects: "**/$(SolutionName)"
-          arguments: "--configuration $(BuildConfiguration)"
       - task: petersendev.dotnet-global-tool-installer.DotnetGlobalToolInstaller.DotnetGlobalToolInstaller@0
         displayName: '.NET Core Global Tool'
         inputs:

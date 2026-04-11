@@ -12,7 +12,6 @@ variables:
   BuildConfiguration: 'Release'
   PublishPath: '$(Build.ArtifactStagingDirectory)'
   TerraformPath: "Pipelines/Releasing/Terraform"
-  SqlOutputFile: '$(Build.ArtifactStagingDirectory)/SQL/Migration.sql'
   
 jobs:
 - job: 'BuildAndPublishAsArtifact'
@@ -51,17 +50,6 @@ jobs:
       zipAfterPublish: true
 
       modifyOutputPath: false
-
-  - script: 'dotnet tool install --global dotnet-ef --version 9.0.10'
-    displayName: 'Install EF'
-
-  - task: DotNetCoreCLI@2
-    displayName: 'Create ef sql migration script'
-    inputs:
-      command: custom
-      custom: ef
-      arguments: ' migrations script --configuration Release --output $(SqlOutputFile) --idempotent --context AppDbContext'
-      workingDirectory: '$(System.DefaultWorkingDirectory)\Sources\Application'
 
   - task: CopyFiles@2
     displayName: "Copy Terraform files"
