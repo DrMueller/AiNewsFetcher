@@ -19,7 +19,7 @@ stages:
         displayName: "Deployment Production"
         environment: "AiNewsFetcher-Production"
         variables:
-          - group: AiNewsFetcher-Prod
+          - group: AiNewsFetcher-Production
         strategy:
           runOnce:
             deploy:
