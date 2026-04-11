@@ -34,7 +34,7 @@ resource "azurerm_app_service_plan" "res" {
 }
 
 resource "azurerm_storage_account" "res" {
-  name                     = lower(substr(join("", ["$(EnvPrefix)", var.app_name]), 0, 24))
+  name                     = lower(substr(join("", [var.environment_name, var.app_name]), 0, 24))
   resource_group_name      = var.resource_group_name
   location                 = var.region
   account_tier             = "Standard"
