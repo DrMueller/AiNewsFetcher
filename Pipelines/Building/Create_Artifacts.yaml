@@ -12,6 +12,7 @@ variables:
   BuildConfiguration: 'Release'
   PublishPath: '$(Build.ArtifactStagingDirectory)'
   TerraformPath: "Pipelines/Releasing/Terraform"
+  ProjectPath: 'Sources/Application/AiNewsFetcher.csproj'
   
 jobs:
 - job: 'BuildAndPublishAsArtifact'
@@ -43,7 +44,7 @@ jobs:
 
       publishWebProjects: false
 
-      projects: 'Sources/Application/DrinkBuddy.csproj'
+      projects: '$(ProjectPath)'
 
       arguments: '--configuration $(BuildConfiguration) --output $(PublishPath)/App /p:DeleteExistingFiles=True'
 
