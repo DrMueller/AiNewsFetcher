@@ -7,10 +7,10 @@ steps:
     displayName: "Terraform init"
     inputs:
       workingDirectory: $(System.DefaultWorkingDirectory)/drop/Terraform
-      backendServiceArm: TerraformConnection
-      backendAzureRmResourceGroupName: Matthias
-      backendAzureRmStorageAccountName: terraformstuff
-      backendAzureRmContainerName: terraformstuffblob
+      backendServiceArm: TerraformConnection2
+      backendAzureRmResourceGroupName: TerraformStuff
+      backendAzureRmStorageAccountName: terraformstuffblob
+      backendAzureRmContainerName: terraformstuffblobcontainer
       backendAzureRmKey: tf/terraform.tfstate
 
   - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV2@2
@@ -18,6 +18,6 @@ steps:
     inputs:
       command: apply
       workingDirectory: $(System.DefaultWorkingDirectory)/drop/Terraform
-      environmentServiceNameAzureRM: TerraformConnection
+      environmentServiceNameAzureRM: TerraformConnection2
     env:
       TF_VAR_app_name: $(AppName)
