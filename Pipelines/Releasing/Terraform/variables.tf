@@ -23,11 +23,6 @@ variable "appinsights_name" {
   default = "matthias"
 }
 
-variable "resource_group_name" {
-  type    = string
-  default = "matthias"
-}
-
 # Varaibles set via azure devops task env variables
 
 variable "app_name" {
