@@ -31,6 +31,14 @@ data "azurerm_storage_container" "container" {
   storage_account_name  = data.azurerm_storage_account.sa.name
 }
 
+resource "azurerm_service_plan" "sp" {
+  name                = "${var.app_name}-service-plan"
+  resource_group_name = var.resource_group_name
+  location            = var.region
+  sku_name            = "FC1"
+  os_type             = "Linux"
+}
+
 resource "azurerm_function_app_flex_consumption" "res-0" {
   app_settings = {
     "AppSettings__OpenAiDeploymentName" = var.app_settings_open_ai_deployment_name
@@ -39,7 +47,7 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
     "AppSettings__SmtpUser"             = var.app_settings_smtp_user
     "AppSettings__SmtpPassword"         = var.app_settings_smtp_password
   }
-  service_plan_id                     = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/matthias/providers/Microsoft.Web/serverFarms/ASP-Matthias-a938"  
+  service_plan_id                   = azurerm_service_plan.sp.id
   client_certificate_enabled         = false
   client_certificate_mode            = "Required"
   enabled                            = true
