@@ -49,7 +49,6 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
   }
   virtual_network_subnet_id                      = ""
   webdeploy_publish_basic_authentication_enabled = false
-  zip_deploy_file                                = ""
   site_config {
     api_definition_url                            = ""
     api_management_api_id                         = ""
