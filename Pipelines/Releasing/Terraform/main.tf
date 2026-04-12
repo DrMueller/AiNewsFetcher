@@ -21,15 +21,6 @@ provider "azurerm" {
   }
 }
 
-resource "azurerm_service_plan" "plan" {
-  name                = "NatthiasServicePlan"
-  location            =  var.region
-  resource_group_name = var.resource_group_name
-
-  os_type  = "Linux"
-  sku_name = "Y1" # Consumption
-}
-
 resource "azurerm_function_app_flex_consumption" "res-0" {
   app_settings = {
     "AppSettings__OpenAiDeploymentName" = var.app_settings_open_ai_deployment_name
@@ -38,7 +29,7 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
     "AppSettings__SmtpUser"             = var.app_settings_smtp_user
     "AppSettings__SmtpPassword"         = var.app_settings_smtp_password
   }
-  service_plan_id                    = azurerm_service_plan.plan.id
+  service_plan_id                    = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/matthias/providers/Microsoft.Web/serverFarms/ASP-Matthias-b5d4"
   client_certificate_enabled         = false
   client_certificate_mode            = "Required"
   enabled                            = true
