@@ -8,4 +8,4 @@ steps:
       deploymentMethod: zipDeploy
       package: "$(System.DefaultWorkingDirectory)/drop/App/App.zip"
       isFlexConsumption: true
-      appSettings: "-AzureDevOpsPat $(AzureDevOpsPat) -SendGridApiKey $(SendGridApiKey) -APPLICATIONINSIGHTS_CONNECTION_STRING $(ApplicationInsightsConnectionString) -APPINSIGHTS_INSTRUMENTATIONKEY $(ApplicationInsightsInstrumentationKey) -FUNCTIONS_WORKER_RUNTIME dotnet -WEBSITE_RUN_FROM_PACKAGE 1"
+      # appSettings: "-AzureDevOpsPat $(AzureDevOpsPat) -SendGridApiKey $(SendGridApiKey) -APPLICATIONINSIGHTS_CONNECTION_STRING $(ApplicationInsightsConnectionString) -APPINSIGHTS_INSTRUMENTATIONKEY $(ApplicationInsightsInstrumentationKey) -FUNCTIONS_WORKER_RUNTIME dotnet -WEBSITE_RUN_FROM_PACKAGE 1"
