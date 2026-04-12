@@ -53,7 +53,7 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
   runtime_version                    = "10.0"
   storage_authentication_type        = "StorageAccountConnectionString"
   storage_access_key                 = data.azurerm_storage_account.sa.primary_access_key
-  storage_container_endpoint         = "${data.azurerm_storage_account.sa.primary_blob_endpoint}${azurerm_storage_container.container.name}"
+  storage_container_endpoint         = "${data.azurerm_storage_account.sa.primary_blob_endpoint}${data.azurerm_storage_container.container.name}"
   # storage_container_endpoint         = "https://matthiasstorage.blob.core.windows.net/app-package-ainewsfetcher-0809eed"
   storage_container_type             = "blobContainer"
   tags = {
