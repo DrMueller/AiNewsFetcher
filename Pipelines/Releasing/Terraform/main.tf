@@ -21,16 +21,8 @@ provider "azurerm" {
   features {}
 }
 
-locals {
-  base_name = substr(
-    lower(replace("${var.environment_prefix}${var.app_name}", "/[^a-z0-9]/", "")),
-    0,
-    24
-  )
-}
-
 resource "azurerm_service_plan" "res" {
-  name                = local.base_name
+  name                = var.app_name
   location            = var.region
   resource_group_name = var.resource_group_name
 
@@ -38,32 +30,29 @@ resource "azurerm_service_plan" "res" {
   sku_name = "Y1" # Consumption Plan für Functions
 }
 
-resource "azurerm_storage_account" "res" {
-  name                     = local.base_name
-  resource_group_name      = var.resource_group_name
-  location                 = var.region
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+data "azurerm_storage_account" "existing" {
+  name                = var.storage_account_name
+  resource_group_name = var.resource_group_name
 }
 
 resource "azurerm_windows_function_app" "res" {
-  name                = local.base_name
+  name                = var.app_name
   location            = var.region
   resource_group_name = var.resource_group_name
   service_plan_id     = azurerm_service_plan.res.id
 
-  storage_account_name       = azurerm_storage_account.res.name
-  storage_account_access_key = azurerm_storage_account.res.primary_access_key
+  storage_account_name       = data.azurerm_storage_account.existing.name
+  storage_account_access_key = data.azurerm_storage_account.existing.primary_access_key
 
   site_config {
+    application_insights_connection_string =  var.app_insights_connection_string
     application_stack {
       dotnet_version = "v6.0"
     }
   }
 
   app_settings = {
-    "AppName"                = var.app_name
-    "AzureWebJobsStorage"   = azurerm_storage_account.res.primary_connection_string
-    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
+    "AppName"                     = var.app_name
+    "FUNCTIONS_WORKER_RUNTIME"    = "dotnet"
   }
 }

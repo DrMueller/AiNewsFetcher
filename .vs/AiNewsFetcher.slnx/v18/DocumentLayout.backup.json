@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\MyGit\\Personal\\AiNewsFetcher\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\ainewsfetcher.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\ainewsfetcher.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\infrastructure\\emails\\services\\implementation\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\infrastructure\\emails\\services\\implementation\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\infrastructure\\emails\\services\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\infrastructure\\emails\\services\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\ainewsfetcher.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\ainewsfetcher.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\infrastructure\\emails\\models\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,7 +93,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -141,7 +145,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\.gitignore",
+              "RelativeDocumentMoniker": "Sources\\Application\\.gitignore",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\.gitignore",
+              "RelativeToolTip": "Sources\\Application\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-11T13:52:14.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "host.json",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\host.json",
               "RelativeDocumentMoniker": "Sources\\Application\\host.json",
@@ -154,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Email.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Emails\\Models\\Email.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\Emails\\Models\\Email.cs",
@@ -167,20 +184,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
               "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
               "RelativeToolTip": "Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T09:11:11.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GetNewsFunction.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\GetNewsFunction.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\GetNewsFunction.cs",
@@ -193,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Program.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Program.cs",
@@ -206,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Prompts.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
@@ -219,20 +236,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "AiNewsFetcher",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\AiNewsFetcher.csproj",
               "RelativeDocumentMoniker": "Sources\\Application\\AiNewsFetcher.csproj",
               "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\AiNewsFetcher.csproj",
               "RelativeToolTip": "Sources\\Application\\AiNewsFetcher.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-04-11T08:38:32.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "local.settings.json",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\local.settings.json",
               "RelativeDocumentMoniker": "Sources\\Application\\local.settings.json",
@@ -245,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Settings\\AppSettings.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\Settings\\AppSettings.cs",
@@ -258,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "IEmailSender.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Emails\\Services\\IEmailSender.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\Emails\\Services\\IEmailSender.cs",
@@ -271,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AzureOpenAiClient.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Implementation\\AzureOpenAiClient.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Implementation\\AzureOpenAiClient.cs",
@@ -284,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "readme.md",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\readme.md",
               "RelativeDocumentMoniker": "Sources\\Application\\readme.md",
@@ -297,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GeneratedFunctionExecutor.g.cs",
               "DocumentMoniker": "C:\\Users\\matthias.mueller\\AppData\\Local\\Temp\\.vsdbgsrc\\6f1e197a1ac0ca61e60c79959d3420262093271a\\GeneratedFunctionExecutor.g.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\matthias.mueller\\AppData\\Local\\Temp\\.vsdbgsrc\\6f1e197a1ac0ca61e60c79959d3420262093271a\\GeneratedFunctionExecutor.g.cs",
@@ -310,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IAzureOpenAiClient.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\IAzureOpenAiClient.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\IAzureOpenAiClient.cs",
@@ -323,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ChatClientProxy.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\Implementation\\ChatClientProxy.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\Implementation\\ChatClientProxy.cs",
@@ -336,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IChatClientProxy.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\IChatClientProxy.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\IChatClientProxy.cs",
@@ -349,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AiClientProxy.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\Implementation\\AiClientProxy.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\Implementation\\AiClientProxy.cs",
@@ -362,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "IAiClientProxy.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\IAiClientProxy.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\IAiClientProxy.cs",
@@ -375,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AiClientProxyFactory.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\Implementation\\AiClientProxyFactory.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\Implementation\\AiClientProxyFactory.cs",
@@ -388,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "IAiClientProxyFactory.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\IAiClientProxyFactory.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Servants\\IAiClientProxyFactory.cs",
