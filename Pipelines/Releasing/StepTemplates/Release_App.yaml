@@ -2,10 +2,8 @@ steps:
   - task: AzureFunctionApp@1
     displayName: "Azure Function App Deploy"
     inputs:
-      azureSubscription: "Pay-As-You-Go (91660754-3529-407f-8458-92759935fbf7)"
+      connectedServiceNameARM: 'Pay-As-You-Go (91660754-3529-407f-8458-92759935fbf7)'
       appType: functionAppLinux
       appName: $(AppName)
-      deploymentMethod: zipDeploy
       package: "$(System.DefaultWorkingDirectory)/drop/App/App.zip"
-      # isFlexConsumption: true
-      # appSettings: "-AzureDevOpsPat $(AzureDevOpsPat) -SendGridApiKey $(SendGridApiKey) -APPLICATIONINSIGHTS_CONNECTION_STRING $(ApplicationInsightsConnectionString) -APPINSIGHTS_INSTRUMENTATIONKEY $(ApplicationInsightsInstrumentationKey) -FUNCTIONS_WORKER_RUNTIME dotnet -WEBSITE_RUN_FROM_PACKAGE 1"
+      isFlexConsumption: true
