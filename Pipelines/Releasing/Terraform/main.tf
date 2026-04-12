@@ -52,7 +52,10 @@ resource "azurerm_windows_function_app" "res" {
   }
 
   app_settings = {
-    "AppName"                     = var.app_name
-    "FUNCTIONS_WORKER_RUNTIME"    = "dotnet"
+    "AppName"                      = var.app_name
+    "FUNCTIONS_WORKER_RUNTIME"     = "dotnet-isolated"
+    "FUNCTIONS_EXTENSION_VERSION"  = "~4"
+    "AzureWebJobsStorage"          = data.azurerm_storage_account.existing.primary_connection_string
+    "WEBSITE_RUN_FROM_PACKAGE"     = "1"
   }
 }
