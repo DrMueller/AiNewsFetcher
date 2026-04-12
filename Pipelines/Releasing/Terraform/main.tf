@@ -29,7 +29,6 @@ data "azurerm_storage_account" "sa" {
 data "azurerm_storage_container" "container" {
   name                  = "app-package-ainewsfetcher-0809eed"
   storage_account_name  = data.azurerm_storage_account.sa.name
-  container_access_type = "private"
 }
 
 resource "azurerm_function_app_flex_consumption" "res-0" {
