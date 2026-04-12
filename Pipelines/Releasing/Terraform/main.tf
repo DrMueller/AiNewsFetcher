@@ -26,7 +26,7 @@ data "azurerm_storage_account" "sa" {
   resource_group_name = var.resource_group_name
 }
 
-resource "azurerm_storage_container" "container" {
+data "azurerm_storage_container" "container" {
   name                  = "app-package-ainewsfetcher-0809eed"
   storage_account_name  = data.azurerm_storage_account.sa.name
   container_access_type = "private"
