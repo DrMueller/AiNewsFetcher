@@ -29,8 +29,7 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
     "AppSettings__SmtpUser"             = var.app_settings_smtp_user
     "AppSettings__SmtpPassword"         = var.app_settings_smtp_password
   }
-  service_plan_id                    = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/matthias/providers/Microsoft.Web/serverFarms/ASP-Matthias-b5d4"
-  client_certificate_enabled         = false
+  service_plan_id                     = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/matthias/providers/Microsoft.Web/serverFarms/ASP-Matthias-a938"  client_certificate_enabled         = false
   client_certificate_mode            = "Required"
   enabled                            = true
   https_only                         = true
