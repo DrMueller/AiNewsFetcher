@@ -24,9 +24,7 @@ provider "azurerm" {
 resource "azurerm_function_app_flex_consumption" "res-0" {
   app_settings                       = {}
   client_certificate_enabled         = false
-  client_certificate_exclusion_paths = ""
   client_certificate_mode            = "Required"
-  custom_domain_verification_id      = "" # Masked sensitive attribute
   enabled                            = true
   http_concurrency                   = 0
   https_only                         = true
@@ -39,36 +37,26 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
   runtime_name                       = "dotnet-isolated"
   runtime_version                    = "10.0"
   service_plan_id                    = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/matthias/providers/Microsoft.Web/serverFarms/ASP-Matthias-adaa"
-  storage_access_key                 = ""
   storage_authentication_type        = "StorageAccountConnectionString"
   storage_container_endpoint         = "https://matthiasstorage.blob.core.windows.net/app-package-ainewsfetcher-0809eed"
   storage_container_type             = "blobContainer"
-  storage_user_assigned_identity_id  = ""
   tags = {
     "hidden-link: /app-insights-resource-id" = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/Matthias/providers/microsoft.insights/components/MatthiasAppInsights"
   }
-  virtual_network_subnet_id                      = ""
   webdeploy_publish_basic_authentication_enabled = false
   site_config {
-    api_definition_url                            = ""
-    api_management_api_id                         = ""
-    app_command_line                              = ""
     application_insights_connection_string        = var.app_insights_connection_string
-    container_registry_managed_identity_client_id = ""
     container_registry_use_managed_identity       = false
     default_documents                             = ["Default.htm", "Default.html", "Default.asp", "index.htm", "index.html", "iisstart.htm", "default.aspx", "index.php"]
     elastic_instance_minimum                      = 0
     health_check_eviction_time_in_min             = 0
-    health_check_path                             = ""
     http2_enabled                                 = false
-    ip_restriction_default_action                 = ""
     load_balancing_mode                           = "LeastRequests"
     managed_pipeline_mode                         = "Integrated"
     minimum_tls_version                           = "1.2"
     remote_debugging_enabled                      = false
     remote_debugging_version                      = "VS2022"
     runtime_scale_monitoring_enabled              = false
-    scm_ip_restriction_default_action             = ""
     scm_minimum_tls_version                       = "1.2"
     scm_use_main_ip_restriction                   = false
     use_32_bit_worker                             = false
