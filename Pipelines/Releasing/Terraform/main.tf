@@ -21,6 +21,17 @@ provider "azurerm" {
   }
 }
 
+data "azurerm_storage_account" "sa" {
+  name                = "matthiasstorage"
+  resource_group_name = var.resource_group_name
+}
+
+resource "azurerm_storage_container" "container" {
+  name                  = "app-package-ainewsfetcher-0809eed"
+  storage_account_name  = azurerm_storage_account.sa.name
+  container_access_type = "private"
+}
+
 resource "azurerm_function_app_flex_consumption" "res-0" {
   app_settings = {
     "AppSettings__OpenAiDeploymentName" = var.app_settings_open_ai_deployment_name
@@ -42,7 +53,9 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
   runtime_name                       = "dotnet-isolated"
   runtime_version                    = "10.0"
   storage_authentication_type        = "StorageAccountConnectionString"
-  storage_container_endpoint         = "https://matthiasstorage.blob.core.windows.net/app-package-ainewsfetcher-0809eed"
+  storage_access_key                 = data.azurerm_storage_account.sa.primary_access_key
+  storage_container_endpoint         = "${azurerm_storage_account.sa.primary_blob_endpoint}${azurerm_storage_container.container.name}"
+  # storage_container_endpoint         = "https://matthiasstorage.blob.core.windows.net/app-package-ainewsfetcher-0809eed"
   storage_container_type             = "blobContainer"
   tags = {
     "hidden-link: /app-insights-resource-id" = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/Matthias/providers/microsoft.insights/components/MatthiasAppInsights"
