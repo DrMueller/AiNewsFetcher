@@ -32,7 +32,6 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
   client_certificate_enabled         = false
   client_certificate_mode            = "Required"
   enabled                            = true
-  # http_concurrency                   = 0
   https_only                         = true
   instance_memory_in_mb              = 512
   location                           = var.region
@@ -41,7 +40,6 @@ resource "azurerm_function_app_flex_consumption" "res-0" {
   resource_group_name                = var.resource_group_name
   runtime_name                       = "dotnet-isolated"
   runtime_version                    = "10.0"
-  service_plan_id                    = "/subscriptions/91660754-3529-407f-8458-92759935fbf7/resourceGroups/matthias/providers/Microsoft.Web/serverFarms/ASP-Matthias-adaa"
   storage_authentication_type        = "StorageAccountConnectionString"
   storage_container_endpoint         = "https://matthiasstorage.blob.core.windows.net/app-package-ainewsfetcher-0809eed"
   storage_container_type             = "blobContainer"
