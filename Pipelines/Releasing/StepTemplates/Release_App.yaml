@@ -1,5 +1,5 @@
 steps:
-  - task: AzureFunctionApp@1
+  - task: AzureFunctionApp@2
     displayName: "Azure Function App Deploy"
     inputs:
       connectedServiceNameARM: 'Pay-As-You-Go (91660754-3529-407f-8458-92759935fbf7)'
