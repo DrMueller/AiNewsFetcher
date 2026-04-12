@@ -22,7 +22,13 @@ provider "azurerm" {
 }
 
 resource "azurerm_function_app_flex_consumption" "res-0" {
-  app_settings                       = {}
+  app_settings = {
+    "AppSettings__OpenAiDeploymentName" = var.app_settings_open_ai_deployment_name
+    "AppSettings__OpenAiEndpoint"       = var.app_settings_open_ai_endpoint
+    "AppSettings__OpenAiKey"            = var.app_settings_open_ai_key
+    "AppSettings__SmtpUser"             = var.app_settings_smtp_user
+    "AppSettings__SmtpPassword"         = var.app_settings_smtp_password
+  }
   client_certificate_enabled         = false
   client_certificate_mode            = "Required"
   enabled                            = true

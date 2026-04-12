@@ -37,3 +37,32 @@ variable "app_name" {
 variable "app_insights_connection_string" {
   type = string
 }
+
+variable "app_settings_open_ai_endpoint" {
+  type = string
+}
+
+variable "app_settings_open_ai_key" {
+  type = string
+}
+
+variable "app_settings_open_ai_deployment_name" {
+  type = string
+}
+
+variable "app_settings_smtp_user" {
+  type = string
+}
+
+variable "app_settings_smtp_password" {
+  type = string
+}
+
+
+
+      # TF_VAR_app_insights_connection_string: $(ApplicationInsights.ConnectionString)
+      # TF_VAR_app_settings_open_ai_endpoint: $(OpenAiEndpoint)
+      # TF_VAR_app_settings_open_ai_key: $(OpenAiKey)
+      # TF_VAR_app_settings_open_ai_deployment_name: $(OpenAiDeploymentName)
+      # TF_VAR_app_settings_smtp_user: $(SmtpUser)
+      # TF_VAR_app_settings_smtp_password: $(SmtpPassword)

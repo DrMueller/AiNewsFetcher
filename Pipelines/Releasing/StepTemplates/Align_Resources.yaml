@@ -22,3 +22,8 @@ steps:
     env:
       TF_VAR_app_name: $(AppName)
       TF_VAR_app_insights_connection_string: $(ApplicationInsights.ConnectionString)
+      TF_VAR_app_settings_open_ai_endpoint: $(AppSettings.OpenAiEndpoint)
+      TF_VAR_app_settings_open_ai_key: $(AppSettings.OpenAiKey)
+      TF_VAR_app_settings_open_ai_deployment_name: $(AppSettings.OpenAiDeploymentName)
+      TF_VAR_app_settings_smtp_user: $(AppSettings.SmtpUser)
+      TF_VAR_app_settings_smtp_password: $(AppSettings.SmtpPassword)
