@@ -96,7 +96,7 @@
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
               "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
               "RelativeToolTip": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T15:31:45.442Z",
               "EditorCaption": ""
@@ -120,9 +120,9 @@
               "Title": "GetNewsFunction.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\GetNewsFunction.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\GetNewsFunction.cs",
-              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\GetNewsFunction.cs*",
-              "RelativeToolTip": "Sources\\Application\\GetNewsFunction.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\GetNewsFunction.cs",
+              "RelativeToolTip": "Sources\\Application\\GetNewsFunction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T15:27:18.931Z",
               "EditorCaption": ""
