@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\MyGit\\Personal\\AiNewsFetcher\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\getnewsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\getnewsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\infrastructure\\azureopenai\\prompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\infrastructure\\azureopenai\\prompts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\infrastructure\\settings\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\infrastructure\\settings\\appsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|c:\\mygit\\personal\\ainewsfetcher\\sources\\application\\infrastructure\\emails\\services\\implementation\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92E5FA69-DE09-5AEC-175E-8075D7024B61}|Sources\\Application\\AiNewsFetcher.csproj|solutionrelative:sources\\application\\infrastructure\\emails\\services\\implementation\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +82,87 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Prompts.cs",
+              "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
+              "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
+              "RelativeToolTip": "Sources\\Application\\Infrastructure\\AzureOpenAi\\Prompts.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:31:45.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Program.cs",
+              "RelativeDocumentMoniker": "Sources\\Application\\Program.cs",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Program.cs",
+              "RelativeToolTip": "Sources\\Application\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:27:20.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GetNewsFunction.cs",
+              "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\GetNewsFunction.cs",
+              "RelativeDocumentMoniker": "Sources\\Application\\GetNewsFunction.cs",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\GetNewsFunction.cs*",
+              "RelativeToolTip": "Sources\\Application\\GetNewsFunction.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:27:18.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppSettings.cs",
+              "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Settings\\AppSettings.cs",
+              "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\Settings\\AppSettings.cs",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Settings\\AppSettings.cs",
+              "RelativeToolTip": "Sources\\Application\\Infrastructure\\Settings\\AppSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:29:18.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "local.settings.json",
+              "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\local.settings.json",
+              "RelativeDocumentMoniker": "Sources\\Application\\local.settings.json",
+              "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\local.settings.json",
+              "RelativeToolTip": "Sources\\Application\\local.settings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-12T15:27:03.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
               "RelativeDocumentMoniker": "Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
               "ToolTip": "C:\\MyGit\\Personal\\AiNewsFetcher\\Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
               "RelativeToolTip": "Sources\\Application\\Infrastructure\\Emails\\Services\\Implementation\\EmailSender.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T16:13:37.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T16:13:37.276Z"
             }
           ]
         },

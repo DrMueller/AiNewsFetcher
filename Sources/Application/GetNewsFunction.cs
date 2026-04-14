@@ -12,7 +12,7 @@ public class GetNewsFunction(ILoggerFactory loggerFactory, IAzureOpenAiClient ai
     private readonly ILogger _logger = loggerFactory.CreateLogger<GetNewsFunction>();
 
     [Function("GetNewsFunction")]
-    public async Task Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer)
+    public async Task Run([TimerTrigger("0 0 1 * * *")] TimerInfo myTimer)
     {
         _logger.LogInformation("C# Timer trigger function executed at: {executionTime}", DateTime.Now);
 
