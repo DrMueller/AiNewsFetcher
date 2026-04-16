@@ -15,9 +15,11 @@ public class GetNewsFunction(ILoggerFactory loggerFactory, IAzureOpenAiClient ai
 
 
     [Function("TestGetNewsFunction")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
+        await RunInternalAsync();
+
         return new OkObjectResult("Welcome to Azure Functions!");
     }
 
@@ -25,7 +27,7 @@ public class GetNewsFunction(ILoggerFactory loggerFactory, IAzureOpenAiClient ai
     public async Task Run([TimerTrigger("0 0 23 * * *")] TimerInfo myTimer)
     {
         _logger.LogInformation("C# Timer trigger function executed at: {executionTime}", DateTime.Now);
-        await RunInternalAsync()
+        await RunInternalAsync();
     }
 
     private async Task RunInternalAsync()
