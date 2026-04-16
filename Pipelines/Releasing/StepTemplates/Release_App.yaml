@@ -7,9 +7,4 @@ steps:
       appName: $(AppName)
       package: "$(System.DefaultWorkingDirectory)/drop/App/App.zip"
       isFlexConsumption: true
-      appSettings: |
-        -AppSettings__OpenAiDeploymentName $(AppSettings.OpenAiDeploymentName)
-        -AppSettings__OpenAiEndpoint $(AppSettings.OpenAiEndpoint)
-        -AppSettings__OpenAiKey $(AppSettings.OpenAiKey)
-        -AppSettings__SmtpPassword $(AppSettings.SmtpPassword)
-        -AppSettings__SmtpUser $(AppSettings.SmtpUser)
+      appSettings: -AppSettings__OpenAiDeploymentName $(AppSettings.OpenAiDeploymentName) -AppSettings__OpenAiEndpoint $(AppSettings.OpenAiEndpoint) -AppSettings__OpenAiKey $(AppSettings.OpenAiKey) -AppSettings__SmtpPassword $(AppSettings.SmtpPassword) -AppSettings__SmtpUser $(AppSettings.SmtpUser)
