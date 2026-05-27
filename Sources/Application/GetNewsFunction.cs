@@ -29,7 +29,7 @@ public class GetNewsFunction(ILoggerFactory loggerFactory, IAzureOpenAiClient ai
         var searchResult = await aiClient.SendAsync(message);
         await emailSender.SendAsync(new Email(
             "Matthias.mueller@noser.com",
-            "AI news",
+            "AI Agentic Development - Good to know",
             searchResult));
     }
 
