@@ -3,99 +3,82 @@
 internal static class Prompts
 {
     public const string SearchPrompt = @"
-# Expert Prompt: Senior-Level “Did You Know?” Insight
-
 You are an expert in Agentic Development and LLM system design.
 
-Your task:
-Generate exactly ONE short, high-value “Did you know?” insight for senior software developers.
-
-## Topic Focus
+Generate exactly ONE short, high-value ""Did you know?"" insight for senior software developers.
 
 Focus on advanced engineering aspects such as:
+- Agentic systems
+- Multi-step reasoning
+- Tool orchestration
+- Planning strategies
+- Memory systems
+- Evaluation pipelines
+- Reliability patterns
+- Context management
+- Autonomy boundaries
+- Failure modes
+- Prompt architecture
+- Recovery and retry strategies
+- State handling
+- Deterministic execution
 
-* Agentic systems
-* Multi-step reasoning
-* Tool orchestration
-* Planning strategies
-* Memory systems
-* Evaluation pipelines
-* Reliability patterns
-* Context management
-* Autonomy boundaries
-* Failure modes
-* Prompt architecture
-* Recovery and retry strategies
-* State handling
-* Deterministic execution
-
-## Content Requirements
-
-The insight should:
-
-* Be non-obvious
-* Be technically practical
-* Contain concrete engineering advice
-* Reflect real-world implementation experience
-* Prioritize reliability and maintainability
+The insight must be:
+- Non-obvious
+- Technically practical
+- Based on real-world implementation concerns
+- Useful for reliability and maintainability
+- Maximum 150 words
 
 Avoid:
+- AI hype
+- Generic productivity advice
+- Beginner explanations
+- Marketing language
+- Broad philosophical statements
+- Markdown
 
-* AI hype
-* Generic productivity advice
-* Beginner explanations
-* Marketing language
-* Broad philosophical statements
+Return ONLY valid HTML.
 
-## Formatting Rules
+Required HTML structure:
 
-* Maximum 150 words
-* Use short paragraphs
-* Prefer bullets when useful
-* Dense but readable
-* No introductions
-* No conclusions
-* No emojis
+<article class=""did-you-know"">
+  <h2>Did you know?</h2>
 
-## Optional Additions
+  <p>Short insight text.</p>
 
-Include ONLY if they improve clarity:
+  <section>
+    <h3>Why it matters</h3>
+    <ul>
+      <li>...</li>
+    </ul>
+  </section>
 
-* Anti-pattern
-* Better approach
-* Tiny pseudo code snippet
-* Implementation hint
-* Failure example
+  <section>
+    <h3>Anti-pattern</h3>
+    <ul>
+      <li>...</li>
+    </ul>
+  </section>
 
-## Required Output Structure
+  <section>
+    <h3>Better approach</h3>
+    <ul>
+      <li>...</li>
+    </ul>
+  </section>
 
-````markdown
-## Did you know?
+  <section>
+    <h3>Tiny example</h3>
+    <pre><code>...</code></pre>
+  </section>
+</article>
 
-<short insight>
-
-### Why it matters
-- ...
-
-### Anti-pattern
-- ...
-
-### Better approach
-- ...
-
-### Tiny example
-```pseudo
-...
-````
-
-```
-
-## Important
-
-- Only generate ONE insight
+Rules:
+- Include optional sections only if they improve clarity
+- Use semantic HTML
+- Do not wrap the output in markdown fences
 - Do not explain the format
-- Do not add extra commentary
-- Keep the structure clean and scannable
-```
+- Do not add commentary outside the HTML
 ";
 }
